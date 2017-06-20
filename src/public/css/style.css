@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+
+}
+.main {
+	width: 1170px;
+	margin: auto;
+}
+li {
+	position: relative;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	display: block;
+	padding: 10px;
+}
+/*header*/
+
+header {
+
+}
+header .top {
+	border-bottom: 1px solid #ddd;
+}
+header .top .main {
+	display: flex;
+	justify-content: space-between;
+}
+header .top  ul {
+	display: flex;
+}
+header .top  a:hover {
+	color: red;
+}
+header .top input {
+	padding:6px 10px;
+	margin-top: 4px;
+}
+header .mid {
+	padding:  10px 0;
+}
+header nav {
+	background: #E10250;
+	margin-bottom: 10px;
+}
+header nav > ul {
+	display: flex;
+}
+header nav>ul>li {
+	border-right: 1px solid #fff;
+}
+header nav  a {
+	color: #fff;
+	transition: all .6s;
+	
+}
+header nav a:hover {
+	background: blue;
+	transition: all .6s;
+}
+header nav ul ul {
+	position: absolute;
+	top: 120%;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .6s;
+	background: gray;
+	width: 150px;
+}
+header nav li li {
+	border-bottom: 1px solid #ddd;
+}
+header nav li:hover ul {
+	top: 100%;
+	visibility: visible;
+	opacity: 1;
+	transition: all .6s;
+}
+.headding {
+	background: #eee;
+}
+.headding ul {
+	display: flex;
+}
+.headding ul a {
+	border-right: 1px solid #fff;
+	color: black;
+	transition: all .5s;
+}
+.headding ul a:hover {
+	background: gray;
+	color: #fff;
+	transition: all .5s;
+}

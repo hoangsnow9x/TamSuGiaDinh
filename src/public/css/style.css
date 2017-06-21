@@ -17,7 +17,18 @@ li {
 a {
 	text-decoration: none;
 	display: block;
+	padding: 10px 0;
+}
+a:hover {
+	color: red!important;
+}
+li a {
 	padding: 10px;
+}
+@keyframes Animation {
+	0% {background: #eee;}
+	50% {background: red;}
+	100% {background: #eee;}
 }
 /*header*/
 
@@ -34,8 +45,8 @@ header .top .main {
 header .top  ul {
 	display: flex;
 }
-header .top  a:hover {
-	color: red;
+header .top  a {
+	color: #b9b9b9;
 }
 header .top input {
 	padding:6px 10px;
@@ -47,6 +58,7 @@ header .mid {
 header nav {
 	background: #E10250;
 	margin-bottom: 10px;
+
 }
 header nav > ul {
 	display: flex;
@@ -60,6 +72,7 @@ header nav  a {
 	
 }
 header nav a:hover {
+	color: #fff!important;
 	background: blue;
 	transition: all .6s;
 }
@@ -67,23 +80,28 @@ header nav ul ul {
 	position: absolute;
 	top: 120%;
 	left: 0;
-	visibility: hidden;
-	opacity: 0;
+	/*visibility: hidden;
+	opacity: 0;*/
+	display: none;
 	transition: all .6s;
 	background: gray;
 	width: 150px;
+	z-index: 1;
+
 }
 header nav li li {
 	border-bottom: 1px solid #ddd;
 }
 header nav li:hover ul {
 	top: 100%;
-	visibility: visible;
-	opacity: 1;
+/*	visibility: visible;
+	opacity: 1;*/
+	display: block;
 	transition: all .6s;
 }
 .headding {
 	background: #eee;
+	margin-bottom: 10px;
 }
 .headding ul {
 	display: flex;
@@ -93,8 +111,196 @@ header nav li:hover ul {
 	color: black;
 	transition: all .5s;
 }
-.headding ul a:hover {
+.headding  li:hover {
 	background: gray;
-	color: #fff;
 	transition: all .5s;
+}
+.headding  li:hover a {
+	color: #fff!important;
+	transition: all .5s;
+}
+.headding li:first-child {
+	display: flex;
+}
+.myAnimation {
+	width: 10px;
+	height: 10px;
+	margin-top: 13px;
+	margin-left: 10px;
+	border-radius: 100%;
+	background: red;
+	animation: Animation 1s linear 3s infinite alternate;
+}
+
+/*new_post*/
+.new_post  .content_main{
+	display: flex;
+}
+.new_post .content {
+	display: flex;
+	flex: 3;
+}
+.new_post .content .left {
+	flex: 2;
+}
+.new_post .content .left  img {
+	width: 100%;
+}
+.new_post .content .right {
+	flex: 1;
+	padding: 0 10px;
+}
+.new_post .content .right a {
+	background: #eee;
+	color: #222;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+.new_post .content a:hover {
+	color: blue;
+}
+.new_post .sidebar {
+	flex: 1;
+}
+/*.video*/
+.video {
+	background: #eee;
+	margin: 10px 0;
+	padding: 10px;
+}
+.head {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 5px;
+}
+
+.head h3 a {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: red;
+}
+.head ul{
+	display: flex;
+}
+.video_content {
+	overflow: hidden;
+}
+.video_item {
+	float: left;
+	width: 15.6%;
+	margin-right: 12px;
+}
+.video_item:last-child {
+	margin-right: none;
+}
+.video_item img {
+	width: 100%;
+}
+
+/*.news*/
+.news .left {
+	display: flex;
+
+}
+.news .left .item {
+	flex: 1;
+}
+.news .left .list {
+	flex: 1;
+}
+
+.news .left .list_item {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.news .left .list_item a {
+	padding-left: 10px;
+}
+
+/*star*/
+
+.star {
+	display: flex;
+}
+
+.star .content {
+	flex: 3;
+}
+.star .sidebar {
+	flex: 1;
+}
+.star .content_head {
+	display: flex;
+}
+.star .content_head a {
+	color: blue;
+	font-size: 18px;
+}
+
+.star .content_head .right {
+	padding-left: 10px;
+}
+.star .content_head .right_item {
+	border-bottom: 1px solid #ddd;
+	padding-bottom:  10px;
+}
+.star .content_bot  {
+	overflow: hidden;
+}
+.star .content_bot  .item {
+	float: left;
+	width: 32%;
+	margin-right: 15px;
+}
+.star .content_bot  .item img {
+	width: 100%;
+}
+.star .content_bot  .item:last-child {
+	margin-right: 0;
+}
+/*section*/
+.section {
+	display: flex;
+	justify-content: space-between;
+}
+.section .item {
+	width:  48%;
+}
+.section .item_top a {
+	font-weight: bold;
+	font-size: 20px;
+	color: black;
+}
+.section .item_top a:hover {
+	color: blue;
+}
+
+/*footer*/
+
+.sport_head {
+	background: #eee;
+}
+.sport_head a {
+	padding: 10px;
+	background: #0B7C29;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	width: 200px;
+}
+.footer {
+	background: #eee;
+	padding: 10px;
+}
+.footer p {
+	padding: 10px;
+}
+.footer .main {
+	display: flex;
+	justify-content: space-between;
+}
+.footer .main .item {
+	width: 40%;
 }
